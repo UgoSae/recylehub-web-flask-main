@@ -1,7 +1,20 @@
 module.exports = {
-  content: ["./templates/**/*.html", "./static/**/*.js"],
   theme: {
-    extend: {},
+    extend: {
+      backdropFilter: {
+        none: "none",
+        blur: "blur(20px)",
+      },
+    },
   },
-  plugins: [],
+  variants: {
+    backdropFilter: ["responsive"],
+  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/line-clamp"),
+    require("tailwindcss-filters"),
+  ],
 };

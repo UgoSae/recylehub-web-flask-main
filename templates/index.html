@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flask + Tailwind</title>
     <link
       href="{{ url_for('static', filename='css/tailwind.css') }}"
       rel="stylesheet"
     />
+    <title>Beranda</title>
   </head>
   <body>
-    <div class="bg-blue-500 text-white text-center p-6">
-      <h1 class="text-3xl font-bold">Hello, Flask with Tailwind CSS!</h1>
-    </div>
+    {% include "components/nav-home.html" %}
   </body>
 </html>
