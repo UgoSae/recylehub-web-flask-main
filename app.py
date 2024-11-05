@@ -14,11 +14,11 @@ def admin_dashboard():
 # Route untuk halaman login
 @app.route('/login')
 def login():
-    return render_template('components/login-form.html')
+    return render_template('page/login-page.html')
 
 @app.route('/register')
 def register():
-    return render_template('components/register-form.html')
+    return render_template('page/register-page.html')
 
 # Route untuk logout
 @app.route('/logout', methods=['POST'])

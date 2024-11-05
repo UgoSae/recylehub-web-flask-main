@@ -1,164 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <title>Registration Form</title>
-  </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl">
-      <!-- Left side with illustration -->
-      <div
-        class="hidden md:flex md:w-1/2 bg-gray-50 items-center justify-center"
-      >
-        <img
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/illustration.svg"
-          alt="Register Illustration"
-          class="w-3/4 h-auto"
-        />
-      </div>
-
-      <!-- Right side with form -->
-      <div class="w-full md:w-1/2 p-8 md:p-10 lg:p-16">
-        <div class="flex items-center mb-6">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 text-blue-600 mr-2"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 2C6.486 2 2 6.486 2 12c0 5.514 4.486 10 10 10s10-4.486 10-10c0-5.514-4.486-10-10-10zm-1 15v-4h2v4h-2zm0-6V7h2v4h-2z"
-            />
-          </svg>
-          <h2 class="text-3xl font-bold text-gray-800">Create an account</h2>
-        </div>
-        <p class="text-gray-600 mb-8">
-          Join us to start your journey. Already have an account?
-          <a
-            href="{{ url_for('login') }}"
-            class="text-green-600 hover:underline"
-            >Log in.</a
-          >
-        </p>
-
-        <form action="#" method="POST" class="space-y-4">
-          <!-- Full Name -->
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700"
-              >Full Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="John Doe"
-              required
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
-            />
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="name@company.com"
-              required
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
-            />
-          </div>
-
-          <!-- Password -->
-          <div>
-            <label
-              for="password"
-              class="block text-sm font-medium text-gray-700"
-              >Password</label
-            >
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="••••••••"
-              required
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
-            />
-          </div>
-
-          <!-- Confirm Password -->
-          <div>
-            <label
-              for="confirm-password"
-              class="block text-sm font-medium text-gray-700"
-              >Confirm Password</label
-            >
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-              placeholder="••••••••"
-              required
-              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
-            />
-          </div>
-
-          <button
-            type="submit"
-            class="w-full py-2 px-4 bg-green-700 hover:bg-green-800 text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-          >
-            Create your account
-          </button>
-
-          <div class="flex items-center justify-center space-x-4 my-4">
-            <span class="text-gray-400">or</span>
-          </div>
-
-          <!-- Google Button -->
-          <button
-            type="button"
-            class="w-full flex items-center justify-center py-2 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-2"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M21.35 11.1h-9.19v2.87h5.22c-.43 2.33-2.41 4.05-5.22 4.05-3.17 0-5.75-2.58-5.75-5.75s2.58-5.75 5.75-5.75c1.45 0 2.8.53 3.83 1.5l2.6-2.6c-1.67-1.56-3.85-2.45-6.43-2.45C6.61 2.5 2.5 6.61 2.5 12s4.11 9.5 9.5 9.5c5.26 0 9.5-4.11 9.5-9.5 0-.64-.06-1.27-.15-1.9z"
-              />
-            </svg>
-            <span class="text-gray-700">Sign up with Google</span>
-          </button>
-
-          <!-- Apple Button -->
-          <button
-            type="button"
-            class="w-full flex items-center justify-center py-2 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100 mt-3"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 mr-2"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.37 1.5c0 1.11-.44 2.12-1.15 2.85-.66.68-1.72 1.2-2.73 1.06-.06-1.02.4-2.09 1.04-2.74.69-.72 1.81-1.21 2.84-1.17zm4.44 13.54c-.02-.04-2.72-1.17-2.75-4.39-.02-2.32 1.89-3.44 1.96-3.49-1.09-1.59-2.78-1.77-3.39-1.77-1.45-.14-2.84.85-3.57.85-.73 0-1.88-.83-3.1-.8-1.6.03-3.08.93-3.91 2.35-1.66 2.88-.43 7.13 1.17 9.46.76 1.14 1.66 2.42 2.86 2.37 1.15-.04 1.58-.74 3-.74s1.81.74 3.08.71c1.28-.03 2.09-1.17 2.85-2.31.56-.86.79-1.31 1.23-2.28z"
-              />
-            </svg>
-            <span class="text-gray-700">Sign up with Apple</span>
-          </button>
-        </form>
-      </div>
+<div class="bg-white flex items-center justify-center min-h-screen">
+  <div class="flex bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl">
+    <!-- Left side with illustration -->
+    <div
+      class="hidden md:flex md:w-1/2 bg-gray-50 items-center justify-center"
+    >
+      <img
+        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/illustration.svg"
+        alt="Register Illustration"
+        class="w-3/4 h-auto"
+      />
     </div>
-  </body>
-</html>
+
+    <!-- Right side with form -->
+    <div class="w-full md:w-1/2 p-8 md:p-10 lg:p-16">
+      <div class="flex items-center mb-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8 text-blue-600 mr-2"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2C6.486 2 2 6.486 2 12c0 5.514 4.486 10 10 10s10-4.486 10-10c0-5.514-4.486-10-10-10zm-1 15v-4h2v4h-2zm0-6V7h2v4h-2z"
+          />
+        </svg>
+        <h2 class="text-3xl font-bold text-gray-800">Buat Akun</h2>
+      </div>
+      <p class="text-gray-600 mb-8">
+        Mulai daftar kemitraan anda segera. Sudah punya akun?
+        <a
+          href="{{ url_for('login') }}"
+          class="text-green-600 hover:underline"
+          >Masuk.</a
+        >
+      </p>
+
+      <form action="#" method="POST" class="space-y-4">
+        <!-- Full Name -->
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Nama Bank Sampah
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Bank sampah melati etc."
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="banksampah@gmail.com"
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label
+            for="password"
+            class="block text-sm font-medium text-gray-700"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
+          />
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+          <label
+            for="confirm-password"
+            class="block text-sm font-medium text-gray-700"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="••••••••"
+            required
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-green-500 focus:border-green-500"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-2 px-4 bg-green-700 hover:bg-green-800 text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+        >
+          Buat akun kamu
+        </button>
+
+        <div class="flex items-center justify-center space-x-4 my-4">
+          <span class="text-gray-400">or</span>
+        </div>
+
+        <div class="flex items-center justify-center space-x-4">
+          <!-- Google Button -->
+          {% include 'components/btn-google.html' %}
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

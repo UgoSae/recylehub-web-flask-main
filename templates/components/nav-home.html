@@ -1,4 +1,4 @@
-<nav class="bg-green-600 dark:bg-gray-800">
+<nav class="bg-green-800 dark:bg-green-900">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <!-- Mobile menu button (dipindahkan ke kanan pada mode mobile) -->
@@ -69,7 +69,7 @@
       <div class="hidden sm:flex space-x-2">
         <a
           href="{{ url_for('login') }}"
-          class="text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          class="text-white bg-green-700 hover:bg-green-900 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         >
           Masuk
         </a>
@@ -80,7 +80,7 @@
   <!-- Mobile menu, toggle visibility based on menu state -->
   <div
     id="mobile-menu"
-    class="fixed inset-y-0 right-0 z-20 w-64 bg-green-600 transform translate-x-full transition-transform duration-300 sm:hidden"
+    class="fixed inset-y-0 right-0 z-20 w-64 bg-green-800 transform translate-x-full transition-transform duration-300 sm:hidden"
   >
     <!-- Close button for mobile menu -->
     <div class="flex justify-end p-4">
@@ -128,7 +128,7 @@
       >
 
       <a
-        href="#"
+        href="{{ url_for('login') }}"
         class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-green-700"
         >Login</a
       >

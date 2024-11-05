@@ -1,9 +1,14 @@
 module.exports = {
+  content: ["./static/**/*.{html,js}", "./templates/**/*.{html,js}"],
+  darkMode: "class",
   theme: {
     extend: {
       backdropFilter: {
         none: "none",
         blur: "blur(20px)",
+      },
+      fontFamily: {
+        poppins: ["poppins"],
       },
     },
   },

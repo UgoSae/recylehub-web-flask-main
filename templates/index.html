@@ -7,15 +7,17 @@
       href="{{ url_for('static', filename='css/tailwind.css') }}"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Beranda</title>
   </head>
   <body>
-    {% include "components/nav-home.html" %}
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    {% include "components/nav-home.html" %} {% include
+    "sections/beranda-section.html" %}
     <script src="https://cdn.jsdelivr.net/npm/flowbite@1.5.3/dist/flowbite.min.js"></script>
   </body>
 </html>
