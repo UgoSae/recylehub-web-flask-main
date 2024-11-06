@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ url_for('static', filename='css/tailwind.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Artikel</title>
+  </head>
+  <body class="font-poppins bg-gray-50">
+
+    <!-- Header Section dengan ID Artikel -->
+    <header id="artikel" class="bg-gradient-to-r from-blue-500 to-green-400 py-16 text-center text-white">
+      <h1 class="text-4xl font-bold">Artikel</h1>
+      <p class="text-lg mt-2">Memuat Artikel-artikel tentang informasi sampah, lingkungan, dan kebersihan</p>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto px-8 py-16 flex flex-col lg:flex-row gap-8">
+      <!-- Main Article Section -->
+      <div class="w-full lg:w-3/4 space-y-8">
+        <!-- Featured Article -->
+        <article class="bg-white p-6 shadow-md rounded-lg">
+          <img src="/static/images/featured-article.jpg" alt="Featured Article" class="w-full h-64 object-cover rounded-lg mb-6" />
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Tips Sederhana Gaya Hidup Ramah Lingkungan Mengurangi Sampah</h2>
+          <p class="text-gray-600 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie blandit nibh risus nisl, scelerisque. Fusce cursus massa ut egestas. Massa lorem turpis lectus viverra. Nulla volutpat urna eget velit vel at gravida fermentum, sem...
+          </p>
+          <a href="#" class="text-green-600 font-semibold hover:underline">Lihat Selengkapnya...</a>
+        </article>
+      </div>
+
+      <!-- Sidebar Section -->
+      <aside class="w-full lg:w-1/4 space-y-8">
+        <!-- Search Bar -->
+        <div class="relative">
+          <label for="search" class="sr-only">Search</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search for..."
+            class="w-full p-3 border border-gray-300 rounded-md"
+          />
+        </div>
+
+        <!-- Popular Articles Section -->
+        <div>
+          <h2 class="text-xl font-bold mb-4">Artikel Populer</h2>
+          <div class="space-y-4">
+            <!-- Each Popular Article -->
+            <div class="flex items-center space-x-4">
+              <img src="/static/images/popular-article-1.jpg" alt="Popular Article 1" class="w-20 h-20 object-cover rounded-lg" />
+              <a href="#" class="text-gray-800 font-medium">Daur Ulang: Mengapa Penting dan Bagaimana Kita Bisa Berkontribusi?</a>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img src="/static/images/popular-article-2.jpg" alt="Popular Article 2" class="w-20 h-20 object-cover rounded-lg" />
+              <a href="#" class="text-gray-800 font-medium">Mengurangi Sampah Plastik dalam Kehidupan Sehari-hari</a>
+            </div>
+            <!-- Tambahkan artikel populer lainnya jika diperlukan -->
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- JavaScript untuk interaksi -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.5.3/dist/flowbite.min.js"></script>
+  </body>
+</html>
